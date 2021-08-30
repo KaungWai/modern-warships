@@ -1,0 +1,2 @@
+cd C:\Users\kaung\AppData\Local\Google\Cloud SDK
+gsutil cors set cors.json gs://modern-warships.appspot.com

@@ -1,0 +1,70 @@
+* {
+    font-family: 'MS', 'Courier New', monospace;
+}
+
+/* layout */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #999;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.push-bottom {
+    margin-bottom: 10px;
+}
+
+/* typography */
+
+.highlight {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.highlight::before {
+    content: "★ ";
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 80%;
+    padding-bottom: 5px;
+    color: #f8f9fa;
+}
+
+.my-content-area {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nation-flag {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.ship-role {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.ship-tier {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.ship-launch-date {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

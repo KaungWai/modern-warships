@@ -1,0 +1,15 @@
+[
+    {
+        "origin": [
+            "https://modern-warships.web.app/",
+            "http://localhost:8080"
+        ],
+        "responseHeader": [
+            "*"
+        ],
+        "method": [
+            "GET"
+        ],
+        "maxAgeSeconds": 86400
+    }
+]
