@@ -36,7 +36,7 @@
 
         <div class="row bg-light push-bottom">
           <div class="col-sm  no-padding">
-            <input v-model="search_keyword" type="text" class="form-control formtrol-sm border-1 border-primary border-top-0 border-start-0 border-end-0 border-bottom bg-light rounded-0 shadow-none" placeholder="Type here to search">
+            <input v-model="search_keyword" type="text" class="form-control formtrol-sm border-1 border-danger border-top-0 border-start-0 border-end-0 border-bottom bg-light rounded-0 shadow-none" placeholder="Type here to search">
           </div>
         </div>
 
