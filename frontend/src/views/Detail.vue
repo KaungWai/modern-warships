@@ -1,6 +1,6 @@
 <template>
   <div id="Detail">
-      <Header class="push-bottom"/>
+      <Header class="push-bottom" :version="api_result_body?api_result_body.version:''"/>
       <div class="my-content-area">
         <div class="container-fluid push-bottom">
           <div class="row bg-light border shadow-sm">
