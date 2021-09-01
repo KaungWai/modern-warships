@@ -22,8 +22,12 @@ function getFlagUrl(navy){
     }
 }
 
+function getShipPreviewUrlFacebook(ship_id){
+    return 'https://www.facebook.com/sharer/sharer.php?u=https://modern-warships.web.app/preview/ship_' + ship_id + '.html'
+}
 
 export default {
     getAPIUrl,
-    getFlagUrl
+    getFlagUrl,
+    getShipPreviewUrlFacebook
 }

@@ -121,6 +121,7 @@
                   <td class="text-end">{{shipData.bomber}}</td>
                 </tr>
               </table>
+              <a :href="getShipPreviewUrlFacebook(shipData.id)"><button class="btn btn-primary btn-sm">SHARE</button></a>
             </div>
           </div>
         </div>
@@ -171,6 +172,9 @@ export default {
         } else {
           return false
         }
+      },
+      getShipPreviewUrlFacebook(ship_id){
+        return this.$UrlUtils.getShipPreviewUrlFacebook(ship_id)
       }
     },
     mounted(){
