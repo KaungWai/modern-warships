@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build & release" : "vue-cli-service build & firebase deploy --only hosting"
+    "build & release" : "vue-cli-service build & node D:/001_Projects/999_Trash/03_mushi/modern-warships/pre_render/index.js & firebase deploy --only hosting"
   },
   "dependencies": {
     "bootstrap": "^5.1.0",
