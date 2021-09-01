@@ -1,0 +1,6 @@
+{
+    "output_folder":"D:/001_Projects/999_Trash/03_mushi/modern-warships/frontend/dist/preview/",
+    "api_url":"https://firebasestorage.googleapis.com/v0/b/modern-warships.appspot.com/o/data%2Fships.json?alt=media&token=8b1c4bcb-e12a-4173-961a-15748f077a06",
+    "url_prefix":"https://modern-warships.web.app/#/detail/",
+    "template_path":"D:/001_Projects/999_Trash/03_mushi/modern-warships/pre_render/template.html"
+}
