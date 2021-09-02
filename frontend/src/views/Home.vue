@@ -24,10 +24,10 @@
           </div>
           
           <div class="col-sm no-padding">
-            <select class="bg-light border-0 rounded-0 text-dark shadow-none" v-model="selected_sort_key">
+            <select class="bg-light border-0 rounded-0 text-dark shadow-none" v-model="selected_sort_key" @change="sortKeyChange()">
               <option v-for="(sort_key,index) in applicable_sort_keys" :key="index" :value="sort_key.value">{{sort_key.name}}</option>
             </select>
-            <select class="bg-light border-0 rounded-0 text-dark shadow-none" v-model="selected_sort_order">
+            <select class="bg-light border-0 rounded-0 text-dark shadow-none" v-model="selected_sort_order" @change="sortOrderChange()">
               <option value="desc">MAX</option>
               <option value="asc">MIN</option>
             </select>
@@ -104,6 +104,16 @@ export default {
     };
   },
   methods: {
+    prepareSession(){
+      let selected_group = sessionStorage.getItem('selected_group')
+      let selected_tier = sessionStorage.getItem('selected_tier')
+      let selected_sort_key = sessionStorage.getItem('selected_sort_key') 
+      let selected_sort_order = sessionStorage.getItem('selected_sort_order')
+      this.selected_group = selected_group ? selected_group : this.selected_group;
+      this.selected_tier = selected_tier ? selected_tier : this.selected_tier;
+      this.selected_sort_key = selected_sort_key ? selected_sort_key : this.selected_sort_key;
+      this.selected_sort_order = selected_sort_order ? selected_sort_order : this.selected_sort_order;
+    },
     loadData(){
       let apiUrl = this.$UrlUtils.getAPIUrl()
       fetch(apiUrl, {mode: 'cors'})
@@ -113,9 +123,9 @@ export default {
         // get all ships
         this.all_ships = this.api_result_body.ships
         // defaut group => ship
-        this.groupTabClick('ship')
+        this.groupTabClick(this.selected_group)
         // default tier => all
-        this.tierTabClick(0)
+        this.tierTabClick(this.selected_tier)
       })
     },
     groupTabClick(group){
@@ -132,9 +142,17 @@ export default {
       let found = this.applicable_sort_keys.find(item => item.value == this.selected_sort_key)
       if(!found) { this.selected_sort_key = 'durability'}
 
+      sessionStorage.setItem('selected_group',group)
     },
     tierTabClick(tier){
       this.selected_tier = tier
+      sessionStorage.setItem('selected_tier',tier)
+    },
+    sortKeyChange(){
+      sessionStorage.setItem('selected_sort_key', this.selected_sort_key)
+    },
+    sortOrderChange(){
+      sessionStorage.setItem('selected_sort_order', this.selected_sort_order)
     },
     getRank(index){
       if(this.selected_sort_order == "desc"){
@@ -145,6 +163,7 @@ export default {
     }
   },
   mounted() {
+    this.prepareSession()
     this.loadData()
   },
   computed : {
