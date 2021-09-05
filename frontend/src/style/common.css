@@ -1,5 +1,5 @@
 * {
-    font-family: 'MS', 'Courier New', monospace;
+
 }
 
 /* layout */
@@ -16,7 +16,7 @@ body {
 }
 
 .push-bottom {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* typography */

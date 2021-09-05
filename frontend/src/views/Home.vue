@@ -207,6 +207,6 @@ export default {
   cursor: pointer;
 }
 .active, .tab-item:hover{
-  border-bottom: 2px solid #dc3545;
+  border-bottom: 2px solid #212529;
 }
 </style>
